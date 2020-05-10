@@ -1,0 +1,21 @@
+{
+  "name": "sudan",
+  "version": "1.0.0",
+  "description": "In the theory of computation, the Sudan function is an example of a function that is recursive, but not primitive recursive",
+  "main": "index.js",
+  "repository": "https://github.com/102/sudan",
+  "bugs": {
+    "email": "rgusev2@gmail.com",
+    "url": "https://github.com/102/sudan/issues"
+  },
+  "author": "Roman Gusev <rgusev2@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "function",
+    "recursive",
+    "sudan"
+  ]
+}

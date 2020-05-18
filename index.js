@@ -1,5 +1,4 @@
 /**
- *
  * @param {number} n
  * @param {number} x
  * @param {number} y

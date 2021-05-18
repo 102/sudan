@@ -9,7 +9,7 @@ It was discovered (and published) in 1927 by [Gabriel Sudan][1], a Romanian math
 ```js
 const F = require("sudan");
 
-console.log(F(1, 4, 7)); // => 759
+console.log(F(1n, 4n, 7n)); // => 759n
 ```
 
 [1]: https://en.wikipedia.org/wiki/Gabriel_Sudan

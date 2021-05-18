@@ -1,3 +1,3 @@
 declare module "sudan" {
-  export default function F(n: number, x: number, y: number): number;
+  export default function F(n: bigint, x: bigint, y: bigint): bigint;
 }

@@ -1,19 +1,19 @@
 /**
- * @param {number} n
- * @param {number} x
- * @param {number} y
- * @returns {number}
+ * @param {bigint} n
+ * @param {bigint} x
+ * @param {bigint} y
+ * @returns {bigint}
  */
 function F(n, x, y) {
-  if (n === 0) {
+  if (n === 0n) {
     return x + y;
   }
 
-  if (y === 0) {
+  if (y === 0n) {
     return x;
   }
 
-  return F(n - 1, F(n, x, y - 1), F(n, x, y - 1) + y);
+  return F(n - 1n, F(n, x, y - 1n), F(n, x, y - 1n) + y);
 }
 
 module.exports = F;

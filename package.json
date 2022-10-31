@@ -11,7 +11,8 @@
   "author": "Roman Gusev <rgusev2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "generate-types": "npx -p typescript tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir ."
   },
   "keywords": [
     "function",

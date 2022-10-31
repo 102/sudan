@@ -1,4 +1,7 @@
 /**
+ * The Sudan function implementation. This is an example of
+ * a function that is recursive, but not primitive recursive
+ *
  * @param {bigint} n
  * @param {bigint} x
  * @param {bigint} y

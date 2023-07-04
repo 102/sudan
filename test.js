@@ -1,5 +1,5 @@
-let assert = require("assert");
-let F = require("./index");
+import assert from "node:assert";
+import { F } from "./index.js";
 
 let cases = [
   [0n, 0n,  0n, 0n],

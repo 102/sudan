@@ -4,7 +4,7 @@
  * @param {bigint} y
  * @returns {bigint}
  */
-function F(n, x, y) {
+export function F(n, x, y) {
   if (n === 0n) {
     return x + y;
   }
@@ -15,5 +15,3 @@ function F(n, x, y) {
 
   return F(n - 1n, F(n, x, y - 1n), F(n, x, y - 1n) + y);
 }
-
-module.exports = F;

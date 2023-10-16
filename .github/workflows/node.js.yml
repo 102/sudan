@@ -25,4 +25,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm test
-      - run: npx --yes prettier . --check

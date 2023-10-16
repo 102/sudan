@@ -1,4 +1,5 @@
 import assert from "node:assert";
+import { test } from "node:test";
 import { F } from "./index.js";
 
 let cases = [
@@ -18,15 +19,7 @@ let cases = [
 ];
 
 cases.forEach(([n, x, y, expected]) => {
-  try {
+  test(`{ n: ${n}, x: ${x}, y: ${y} } ⇒ ${expected}`, () => {
     assert.strictEqual(F(n, x, y), expected);
-    console.log("✓", { n, x, y }, "⇒", expected);
-  } catch (error) {
-    if (error instanceof assert.AssertionError) {
-      console.log("X", { n, x, y }, "⇒", expected, error.message);
-      process.exitCode = 1;
-    } else {
-      throw error;
-    }
-  }
+  })
 });

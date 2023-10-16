@@ -12,7 +12,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "test": "node --test"
   },
   "keywords": [
     "function",

@@ -4,14 +4,28 @@
  * @param {bigint} y
  * @returns {bigint}
  */
-export function F(n, x, y) {
-  if (n === 0n) {
-    return x + y;
-  }
+export function F(...args) {
+  const cache = new Map();
 
-  if (y === 0n) {
-    return x;
-  }
+  return (function _F(n, x, y) {
+    const cacheKey = [n, x, y].join();
 
-  return F(n - 1n, F(n, x, y - 1n), F(n, x, y - 1n) + y);
+    if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+    }
+
+    if (n === 0n) {
+      return x + y;
+    }
+
+    if (y === 0n) {
+      return x;
+    }
+
+    const result = _F(n - 1n, _F(n, x, y - 1n), _F(n, x, y - 1n) + y);
+
+    cache.set(cacheKey, result);
+
+    return result;
+  })(...args);
 }

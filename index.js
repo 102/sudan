@@ -5,13 +5,27 @@
  * @returns {bigint}
  */
 export function F(n, x, y) {
-  if (n === 0n) {
-    return x + y;
-  }
+  const cache = new Map();
 
-  if (y === 0n) {
-    return x;
-  }
+  return (function _F(_n, _x, _y) {
+    const cacheKey = [_n, _x, _y].join();
 
-  return F(n - 1n, F(n, x, y - 1n), F(n, x, y - 1n) + y);
+    if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+    }
+
+    if (_n === 0n) {
+      return _x + _y;
+    }
+
+    if (_y === 0n) {
+      return _x;
+    }
+
+    const result = _F(_n - 1n, _F(_n, _x, _y - 1n), _F(_n, _x, _y - 1n) + _y);
+
+    cache.set(cacheKey, result);
+
+    return result;
+  })(n, x, y);
 }

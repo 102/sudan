@@ -4,6 +4,16 @@ The [Sudan function][2]. In the theory of computation, the Sudan function is an 
 
 It was discovered (and published) in 1927 by [Gabriel Sudan][1], a Romanian mathematician who was a student of David Hilbert.
 
+## Definition
+
+```math
+\begin{array}{lll} \\
+  F_0(x, y) & = x+y \\
+  F_{n+1}(x,0) & = x & \text{if }n \geq 0 \\
+  F_{n+1}(x,y+1) & = F_n(F_{n+1}(x,y),F_{n+1}(x,y)+y+1 & \text{if }n \geq 0
+\end{array}
+```
+
 ## Usage
 
 ```js
